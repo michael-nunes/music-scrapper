@@ -8,6 +8,12 @@ function init() {
   });
 } 
 
+function ShowLoadingIndicator(show) {
+    const indicator = document.querySelector(".loader");
+    indicator.style.display =  show ? 'block' : 'none';
+}
+
+
 function DisplayContent(txt) {  
     document.querySelector("h1").innerText = txt;
 }
@@ -21,6 +27,7 @@ function HandleResonse(response) {
     else {
         DisplayContent("Do not have song");
     }
+    ShowLoadingIndicator(false);
 }
 
 function RequestSongInfo(tab) {

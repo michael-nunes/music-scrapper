@@ -66,8 +66,8 @@ function TryGetSongLetrasMusBr2() {
     return info;
 }
 
-function getSongInfo(message, sender, send) {
-    
+function getSongInfo(message, sender, send)  {
+
     let host = window.location.host;
     
     const table = {};
@@ -81,7 +81,6 @@ function getSongInfo(message, sender, send) {
 
     
     console.log("Getting Song Info");
- 
-    
+
     send(table[host]());   
 }
